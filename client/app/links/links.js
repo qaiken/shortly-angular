@@ -10,4 +10,9 @@ angular.module('shortly.links', [])
   });
 
   // $scope.getLinks(); // maybe?
+})
+.directive('shortenedLink', function() {
+  return {
+    templateUrl: 'client/app/links/shortened-link.html'; // why does it make a GET request
+  };
 });

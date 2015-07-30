@@ -1,7 +1,7 @@
-<div id='container'>
+<div id='container' >
 <!-- Your code here -->
 <form name="form" novalidate ng-submit="submitLink()">
-  <input ng-model="link.url" type="url" name="url" required />
+  <input ng-model="link.url" type="url" name="url" required placeholder="Submit a new link"/>
   <button type="submit">submit</button>
 </form>
 <span ng-show="form.url.$dirty && form.url.$error.required">Must have a URL</span>

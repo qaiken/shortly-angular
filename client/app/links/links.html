@@ -1,13 +1,17 @@
 <div id='container'>
   <!-- Your html here -->
-  <input type="text" ng-model="searchText"></input>
+  <input type="text" ng-model="searchText" placeholder="filter links" />
   <ul>
-    <li ng-repeat="linkObj in data.links | filter: searchText | orderBy:'-visits' " class="link">
+    <li shortened-link ng-repeat="linkObj in data.links | filter: searchText | orderBy:'-visits' " class="link fx-fade-right"></li>
+  </ul>
+</div>
+
+
+
+<!--
       <h1 class="visits">Visits: {{linkObj.visits}}</h1>
       <h1 class="title">{{linkObj.title}}</h1>
       <h3>{{linkObj.link}}</h3>
       <h5 class="original">{{linkObj.base_url}}</h5>
       <a href="/api/links/{{linkObj.code}}">{{linkObj.url}}</a>
-    </li>
-  </ul>
-</div>
+    -->
