@@ -1,0 +1,7 @@
+<ul ng-controller="NavController">
+  <li ng-hide="isAuth();"><a ng-href="#/signup">Sign Up</a></li>
+  <li ng-hide="isAuth();"><a ng-href="#/signin">Sign in</a></li>
+  <li ng-show="isAuth();"><a ng-href="#/links">Your Links</a></li>
+  <li ng-show="isAuth();"><a ng-href="#/shorten">Shorten</a></li>
+  <li ng-show="isAuth();"><a ng-click="signOut();" href="">Sign Out</a></li>
+</ul>
