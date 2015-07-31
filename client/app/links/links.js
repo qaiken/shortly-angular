@@ -13,6 +13,6 @@ angular.module('shortly.links', [])
 })
 .directive('shortenedLink', function() {
   return {
-    templateUrl: 'client/app/links/shortened-link.html'; // why does it make a GET request
+    templateUrl: 'app/links/shortened-link.html'
   };
 });

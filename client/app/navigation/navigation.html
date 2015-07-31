@@ -1,7 +1,14 @@
-<ul ng-controller="NavController">
-  <li ng-hide="isAuth();"><a ng-href="#/signup">Sign Up</a></li>
-  <li ng-hide="isAuth();"><a ng-href="#/signin">Sign in</a></li>
-  <li ng-show="isAuth();"><a ng-href="#/links">Your Links</a></li>
-  <li ng-show="isAuth();"><a ng-href="#/shorten">Shorten</a></li>
-  <li ng-show="isAuth();"><a ng-click="signOut();" href="">Sign Out</a></li>
-</ul>
+<div layout="column" layout-fill ng-controller="NavController">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span>Shortly</span>
+      <!-- fill up the space between left and right area -->
+      <span flex></span>
+      <md-button ui-sref="signup" ng-hide="isAuth()">Sign Up</md-button>
+      <md-button ui-sref="signin" ng-hide="isAuth()">Sign In</md-button>
+      <md-button ui-sref="links" ng-show="isAuth()">Your Links</md-button>
+      <md-button ui-sref="shorten" ng-show="isAuth()">Shorten</md-button>
+      <md-button ng-click="signOut()" ng-show="isAuth()">Sign Out</md-button>
+    </div>
+  </md-toolbar>
+</div>

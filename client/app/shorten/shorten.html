@@ -1,11 +1,12 @@
 <div id='container' >
 <!-- Your code here -->
 <form name="form" novalidate ng-submit="submitLink()">
-  <input ng-model="link.url" type="url" name="url" required placeholder="Submit a new link"/>
-  <button type="submit">submit</button>
+  <md-input-container>
+    <label>URL</label>
+    <input type='url' name="url" ng-model='link.url' required/>
+  </md-input-container>
+  <md-button class="md-raised" ng-disabled="form.$invalid" type="submit">Submit</md-button>
+  <span ng-show="form.url.$dirty && form.url.$error.required" class="md-caption">Must have a URL</span>
+  <span ng-show="form.url.$dirty && form.url.$error.url" class="md-caption">Not a valid URL</span>
 </form>
-<span ng-show="form.url.$dirty && form.url.$error.required">Must have a URL</span>
-<span ng-show="form.url.$dirty && form.url.$error.url">Not a valid URL</span>
 </div>
-
-
